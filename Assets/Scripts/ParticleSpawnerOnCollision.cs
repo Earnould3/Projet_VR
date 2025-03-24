@@ -22,15 +22,9 @@ public class ParticleSpawnerOnCollision : MonoBehaviour
         {
             lastSpawnPosition = transform.position;
             
-            // ray cast towards the other object
-            var direction = other.transform.position - transform.position;
-            var ray = new Ray(transform.position, direction);
-            if (Physics.Raycast(ray, out var hit))
-            {
-                var emitParams = new ParticleSystem.EmitParams();
-                emitParams.position = hit.point;
-                particle.Emit(emitParams, 1);
-            }
+            var emitParams = new ParticleSystem.EmitParams();
+            // emitParams.position = hit.point;
+            particle.Emit(emitParams, 1);
         }
     }
 }
