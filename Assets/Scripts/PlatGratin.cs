@@ -41,13 +41,14 @@ public class PlatGratin : MonoBehaviour
         if (other.CompareTag(casseroleTag))
         {
             var casserole = other.GetComponent<Casserole>();
-            if (casserole != null && casserole.contenuActuel == Casserole.Contenu.EauEtPates)
+            if (casserole != null && casserole.contenuActuel == Casserole.Contenu.Cuit)
             {
                 AjouterPates();
+                casserole.contenuActuel = Casserole.Contenu.Vide;
             }
         }
         
-        if (other.CompareTag(fromageTag))
+        if (other.CompareTag(fromageTag) && etat == EtatPlat.AvecPates)
         {
             Destroy(other.gameObject); // supprime le bloc de fromage
             AjouterFromage();

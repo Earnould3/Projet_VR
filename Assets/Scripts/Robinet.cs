@@ -4,7 +4,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider))]
 public class Robinet : MonoBehaviour
 {
-    private bool allume = false;
+    public bool allume = false;
     public UnityEvent onEauActive;
     public UnityEvent onEauInactive;
 
