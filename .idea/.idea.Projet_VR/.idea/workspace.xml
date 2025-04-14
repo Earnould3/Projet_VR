@@ -7,11 +7,9 @@
     <list default="true" id="2d6e8cd6-1698-44f5-ac70-b3b724913545" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_VR/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TheoTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TheoTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Casserole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Casserole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Four.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Four.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatGratin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatGratin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RapeFromage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RapeFromage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Robinet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Robinet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRTemplateAssets/Prefabs/Setup/Complete XR Origin Set Up Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRTemplateAssets/Prefabs/Setup/Complete XR Origin Set Up Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HoverColorScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -98,7 +99,7 @@
       <workItem from="1742840168971" duration="1745000" />
       <workItem from="1743445534476" duration="923000" />
       <workItem from="1744051343792" duration="1751000" />
-      <workItem from="1744652672373" duration="594000" />
+      <workItem from="1744652672373" duration="3699000" />
     </task>
     <servers />
   </component>
