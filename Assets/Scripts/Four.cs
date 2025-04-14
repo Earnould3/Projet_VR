@@ -1,16 +1,32 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider))]
 public class Four : MonoBehaviour
 {
-    public enum EtatFour { Rien, EnChauffage, Chaud }
-    public enum Ouverture { Ouvert, Ferme }
+    public enum EtatFour
+    {
+        Rien,
+        EnChauffage,
+        Chaud
+    }
+
+    public enum Ouverture
+    {
+        Ouvert,
+        Ferme
+    }
 
     public EtatFour etatActuel = EtatFour.Rien;
     public Ouverture ouverture = Ouverture.Ferme;
 
     public float tempsPourChaud = 5f;
     private float timer;
+
+    public UnityEvent fourPret;
+    public UnityEvent fourOuvert;
+    public UnityEvent fourFerme;
 
     void Update()
     {
@@ -19,19 +35,18 @@ public class Four : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= tempsPourChaud)
             {
+                fourPret.Invoke();
                 etatActuel = EtatFour.Chaud;
-                ChaufferObjetsDedans();
             }
         }
     }
 
-    void ChaufferObjetsDedans()
+    private void OnTriggerStay(Collider other)
     {
-        foreach (Transform obj in transform)
-        {
-            var chauffable = obj.GetComponent<PeutChauffer>();
-            if (chauffable != null) chauffable.Chauffer();
-        }
+        if (etatActuel != EtatFour.Chaud) return;
+
+        var chauffable = other.GetComponent<PeutChauffer>();
+        if (chauffable != null) chauffable.Chauffer();
     }
 
     public void Allumer()
@@ -43,5 +58,14 @@ public class Four : MonoBehaviour
     public void OuvrirFermer()
     {
         ouverture = ouverture == Ouverture.Ouvert ? Ouverture.Ferme : Ouverture.Ouvert;
+        
+        if (ouverture == Ouverture.Ouvert)
+        {
+            fourOuvert.Invoke();
+        }
+        else
+        {
+            fourFerme.Invoke();
+        }
     }
 }
