@@ -29,6 +29,7 @@ public class Casserole : MonoBehaviour
 
     public void RemplirEau()
     {
+        Debug.Log("remplissage");
         if (contenuActuel == Contenu.Vide)
         {
             if (timer == 0) CommenceRemplirEau.Invoke();

@@ -17,6 +17,7 @@ public class PlatGratin : MonoBehaviour
 
     public UnityEvent pateAjoutee;
     public UnityEvent fromageAjoutee;
+    public UnityEvent theEnd;
 
     public void AjouterPates()
     {
@@ -41,7 +42,7 @@ public class PlatGratin : MonoBehaviour
         if (other.CompareTag(casseroleTag))
         {
             var casserole = other.GetComponent<Casserole>();
-            if (casserole != null && casserole.contenuActuel == Casserole.Contenu.EauEtPates)
+            if (casserole != null && casserole.contenuActuel == Casserole.Contenu.Cuit)
             {
                 AjouterPates();
             }
@@ -62,6 +63,9 @@ public class PlatGratin : MonoBehaviour
         }
         
         if (etat == EtatPlat.Complet && timer >= tempsDeCuisson)
+        {
             etat = EtatPlat.Cuit;
+            theEnd?.Invoke();
+        }
     }
 }

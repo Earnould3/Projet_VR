@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Pates
+  - Fromage
+  - FromageRape
+  - Casserole
   layers:
   - Default
   - TransparentFX
