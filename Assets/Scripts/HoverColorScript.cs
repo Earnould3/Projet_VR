@@ -21,12 +21,10 @@ public class TouchReveal : MonoBehaviour
         materialInstance = rend.material; // create instance for this object
         
         // force the object to have only one material
-        if (rend.materials.Length > 1)
-        {
-            Material[] materials = new Material[1];
-            materials[0] = materialInstance;
-            rend.materials = materials;
-        }
+            for (int i = 0; i < rend.materials.Length; i++)
+            {
+                rend.materials[i] = materialInstance;
+            }
 
         interactable.hoverEntered.AddListener(OnHoverEnter);
         interactable.hoverExited.AddListener(OnHoverExit);
